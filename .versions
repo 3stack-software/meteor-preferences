@@ -1,8 +1,9 @@
-3stack:preferences@0.1.0
-base64@1.0.2
-coffeescript@1.0.5
-ejson@1.0.5
-json@1.0.2
-logging@1.0.6
-meteor@1.1.4
-underscore@1.0.2
+3stack:preferences@1.0.0
+base64@1.0.3
+ejson@1.0.6
+json@1.0.3
+logging@1.0.7
+meteor@1.1.5
+reactive-var@1.0.5
+tracker@1.0.6
+underscore@1.0.3

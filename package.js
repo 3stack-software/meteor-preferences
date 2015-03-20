@@ -1,7 +1,7 @@
 Package.describe({
   name: '3stack:preferences',
-  version: '0.1.0',
-  summary: 'Non-reactive user preference system. Backed by local-storage.',
+  version: '1.0.0',
+  summary: 'A user preference system',
   git: 'https://github.com/3stack-software/meteor-preferences',
   documentation: 'README.md'
 });
@@ -10,9 +10,20 @@ Package.describe({
 Package.onUse(function(api){
   api.versionsFrom('METEOR@0.9.2');
 
-  api.use(['coffeescript','ejson', 'logging'], 'client');
+  api.use([
+    'tracker',
+    'reactive-var',
+    'underscore',
+    'logging'
+  ], 'client');
 
-  api.export('Preferences', 'client');
+  api.export([
+    'MultiPreferenceStore',
+    'PreferenceVar'
+  ], 'client');
 
-  api.addFiles('Preferences.coffee', 'client');
+  api.addFiles([
+    'preference-stores.js',
+    'preference-var.js'
+  ], 'client');
 });
