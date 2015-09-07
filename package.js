@@ -19,10 +19,12 @@ Package.onUse(function(api){
 
   api.export([
     'MultiPreferenceStore',
-    'PreferenceVar'
+    'PreferenceVar',
+    'PreferenceDict'
   ], 'client');
 
   api.addFiles([
+    'preference-dict.js',
     'preference-stores.js',
     'preference-var.js'
   ], 'client');
